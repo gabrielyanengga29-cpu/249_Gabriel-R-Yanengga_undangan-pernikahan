@@ -1,0 +1,231 @@
+
+:root {
+  --green: #526b57;
+  --green-dark: #354b3a;
+  --cream: #faf7f0;
+  --gold: #b99b61;
+  --text: #44483f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.8;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: white;
+  background:
+    linear-gradient(rgba(30, 48, 35, .55), rgba(30, 48, 35, .65)),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?w=1600")
+    center/cover no-repeat;
+}
+
+.hero-content {
+  animation: fadeUp 1.2s ease;
+}
+
+.subtitle {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.hero h1,
+.script-title {
+  font-family: "Great Vibes", cursive;
+  color: var(--green);
+}
+
+.hero h1 {
+  color: white;
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  margin: 20px 0;
+}
+
+.hero-date {
+  margin: 25px 0;
+  letter-spacing: 1px;
+}
+
+.btn-wedding {
+  background: var(--green);
+  color: white;
+  border: 1px solid var(--green);
+  border-radius: 30px;
+  padding: 12px 28px;
+  transition: .3s;
+}
+
+.btn-wedding:hover {
+  background: var(--green-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 85px 20px;
+}
+
+.script-title {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  margin: 15px 0;
+}
+
+.description {
+  max-width: 650px;
+  margin: 20px auto;
+}
+
+.bg-soft {
+  background: #eee9dc;
+}
+
+.person-card {
+  padding: 25px 15px;
+}
+
+.person-card h3,
+.event-card h3 {
+  color: var(--green);
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.profile-img {
+  width: 190px;
+  height: 190px;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0 5px 20px #00000012;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.countdown div {
+  background: white;
+  border: 1px solid #e2d7c1;
+  border-radius: 12px;
+  min-width: 78px;
+  padding: 15px 12px;
+  box-shadow: 0 5px 20px #00000008;
+}
+
+.countdown strong,
+.countdown span {
+  display: block;
+}
+
+.countdown strong {
+  font-size: 1.7rem;
+  color: var(--green);
+}
+
+.countdown span {
+  font-size: .75rem;
+}
+
+.event-card {
+  max-width: 550px;
+  margin: 30px auto 0;
+  padding: 35px 20px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px #00000008;
+}
+
+.event-card hr {
+  border-color: var(--gold);
+  margin: 25px auto;
+  max-width: 150px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform .3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.025);
+}
+
+.rsvp-form {
+  max-width: 480px;
+  text-align: left;
+}
+
+.rsvp-form .form-control,
+.rsvp-form .form-select {
+  padding: 13px;
+  border-radius: 10px;
+  border-color: #d8d1c3;
+}
+
+.footer {
+  padding: 25px 15px;
+  background: var(--green-dark);
+  color: white;
+  font-size: .8rem;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 60px 18px;
+  }
+
+  .gallery-img {
+    height: 175px;
+  }
+
+  .profile-img {
+    width: 155px;
+    height: 155px;
+  }
+
+  .countdown {
+    gap: 8px;
+  }
+
+  .countdown div {
+    min-width: 65px;
+    padding: 10px 7px;
+  }
+}
